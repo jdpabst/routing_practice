@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = 'app'>
+    <title>My First Router</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to my website</h1>
+       <div>
+        <ul>
+            <a ui-sref="home"><p>Home</p></a>
+            <a ui-sref="about"><p>About</p></a>
+            <a ui-sref="roster"><p>Roster</p></a>
+        </ul>
+       </div>
+
+       <style>
+           div ul{
+               height: 5vh;
+               width: 100%;
+               display: flex;
+               justify-content: space-around;
+           }
+
+           a{
+                text-decoration: none;
+                
+           }
+           </style>
+
+
+
+
+<!--whatever current state is, will load the current view-->
+    <ui-view></ui-view>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+    <script src='playerService.js'></script>
+    <script src="./roster/rosterCtrl.js"></script>
+    <script src="./player/playerCtrl.js"></script>
+</body>
+</html>

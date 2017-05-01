@@ -1,0 +1,12 @@
+    <div ng-repeat="player in players">
+        <a ui-sref="player({id: player.id})">
+        <img ng-src="{{player.image}}"/>
+        </a>
+        <h2>{{player.name}}</h2>
+        </div>
+
+        <style>
+            img {
+                height: 300px;
+            }
+            </style>
